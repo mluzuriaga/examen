@@ -1,13 +1,11 @@
 spring:
-  profiles: local
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/aramark?zeroDateTimeBehavior=convertToNull
-    username: root
-    password: password
-
----
+    url: jdbc:h2:mem:flexibility_db
+    username: b9aef16db746b0
+    password: 872a8a60
+    driver-class-name: org.h2.Driver
